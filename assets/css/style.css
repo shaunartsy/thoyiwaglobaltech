@@ -7066,3 +7066,120 @@ img {
         display: inline-block;
     }
 }
+
+/* Mobile container margins */
+@media (max-width: 767px) {
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    /* Removed specific full-width section exceptions so logo and button align with text margins */
+    
+    .hero .slide-caption {
+        padding-left: 45px !important; /* 45px + 15px col padding = 60px total margin */
+        padding-right: 45px !important;
+    }
+    
+    .hero, .hero .slide {
+        height: 550px !important;
+        min-height: 550px !important;
+    }
+    
+    /* Ensure absolutely positioned button and relative logo respect the new margin */
+    .site-header .navbar-header .open-btn {
+        right: 40px !important;
+    }
+    .site-header .site-logo {
+        margin-left: 25px !important;
+    }
+
+    /* --- Modern Side Nav UI/UX Refactor --- */
+    
+    /* Main side nav container */
+    .site-header #navbar {
+        width: 320px !important;
+        max-width: 85vw !important;
+        right: -330px !important;
+        border: none !important;
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15) !important;
+        background-color: #ffffff !important;
+        transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1) !important;
+        padding-top: 70px !important; 
+    }
+
+    /* When open */
+    .site-header #navbar.slideInn {
+        right: 0 !important;
+    }
+
+    /* Close Button Refined */
+    .site-header #navbar .close-navbar {
+        left: auto !important;
+        right: 20px !important;
+        top: 20px !important;
+        width: 40px !important;
+        height: 40px !important;
+        background-color: #f5f5f5 !important;
+        color: #333333 !important;
+        border-radius: 50% !important;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05) !important;
+        transition: background-color 0.3s, transform 0.3s, color 0.3s !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+    }
+    
+    .site-header #navbar .close-navbar:hover {
+        background-color: #F28C28 !important;
+        color: #ffffff !important;
+        transform: rotate(90deg);
+    }
+    
+    /* Main Links Typography and Spacing */
+    .site-header #navbar > ul > li {
+        border-bottom: 1px solid #f2f2f2 !important;
+    }
+    .site-header #navbar > ul > li:last-child {
+        border-bottom: none !important;
+    }
+    
+    .site-header #navbar > ul > li > a {
+        padding: 16px 30px !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        color: #222222 !important;
+        letter-spacing: 0.3px;
+        transition: color 0.3s, padding-left 0.3s !important;
+    }
+    
+    .site-header #navbar > ul > li > a:hover {
+        color: #F28C28 !important;
+        padding-left: 36px !important; 
+    }
+
+    /* Sub-menu styling */
+    .site-header #navbar > ul > li .sub-menu {
+        background-color: #fafafa !important;
+    }
+    .site-header #navbar > ul > li .sub-menu li {
+        border-bottom: 1px solid #f0f0f0 !important;
+    }
+    .site-header #navbar > ul > li > .sub-menu a {
+        padding: 14px 30px 14px 45px !important;
+        font-size: 15px !important;
+        color: #555555 !important;
+        transition: color 0.3s, padding-left 0.3s !important;
+    }
+    .site-header #navbar > ul > li > .sub-menu a:hover {
+        color: #F28C28 !important;
+        padding-left: 50px !important;
+    }
+    
+    /* Dropdown arrow positioning */
+    .site-header #navbar > ul .menu-item-has-children > a:before {
+        right: 30px !important;
+        color: #bbbbbb;
+        font-size: 18px !important;
+    }
+}
