@@ -3883,7 +3883,20 @@ img {
 }
 @media (max-width: 991px) {
   .offer-pic {
-    display: none;
+    display: block;
+    padding: 0;
+    margin-top: 40px;
+  }
+  .offer-pic:after {
+    display: none; /* hide fixed-size decorative border */
+  }
+  .offer-img-wrapper {
+    border-radius: 8px;
+    width: 100%;
+  }
+  .offer-pic img {
+    width: 100%;
+    height: auto;
   }
 }
 .offer-pic:after {
@@ -7224,5 +7237,33 @@ img {
         scroll-snap-align: center;
         float: none !important;
         margin-right: 15px;
+    }
+}
+
+/* Responsive spacing for CTA secondary buttons */
+.cta-secondary-btn {
+    margin-left: 15px;
+}
+@media (max-width: 767px) {
+    .cta-secondary-btn {
+        margin-left: 0 !important;
+        margin-top: 15px;
+    }
+    
+    /* Lift the top text line up drastically */
+    .projects-intro-section {
+        padding-top: 15px !important;
+    }
+
+    /* Bring up projects container drastically on mobile */
+    .projects-grid-view-section {
+        margin-top: -110px !important;
+    }
+}
+
+/* Contact form mobile spacing */
+@media (max-width: 991px) {
+    .contact-form-wrapper {
+        margin-top: 50px !important;
     }
 }
