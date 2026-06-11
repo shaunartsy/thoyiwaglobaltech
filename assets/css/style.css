@@ -3351,6 +3351,13 @@ img {
 .site-footer .upper-footer a:hover {
   color: #F28C28;
 }
+
+/* Fix grid wrapping for uneven footer widgets */
+.site-footer .upper-footer .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 991px) {
   .site-footer .upper-footer .row > .col {
     margin-bottom: 55px;
@@ -3580,6 +3587,7 @@ img {
   .all-news-link {
     text-align: left;
     margin-top: 25px;
+    margin-bottom: 25px;
   }
 }
 
@@ -7171,7 +7179,10 @@ img {
         margin-left: 25px !important;
     }
     
-    /* Horizontal slider for services on mobile */
+}
+
+/* Horizontal slider for services on tablet and mobile */
+@media (max-width: 991px) {
     .services-grids.row {
         display: flex;
         flex-wrap: nowrap;
@@ -7217,6 +7228,9 @@ img {
         font-size: 13px;
     }
     
+}
+
+@media (max-width: 767px) {
     /* Horizontal slider for recent-projects on mobile */
     .recent-projects-grids {
         display: flex;
